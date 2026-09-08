@@ -18,7 +18,7 @@
             [clojure.java.io :as io]
             [clojure.edn :as edn]
             [clojure.walk :as walk]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             ))
 
 (def publish-licenses #{"open" "derived-only"})            ; G4: never raw/restricted
@@ -66,14 +66,14 @@
   (let [m (load-edn (io/file actor-dir "manifest.edn"))
         g5 (get-in m ["constitutionalGates" "gates" "G5"])
         n1 (get-in m ["nonGoals" "goals" "N1"])]
-    (is (str/includes? (str/upper-case g5) "INALIENABLE") "G5 must be a named gate")
+    (is (str/includes? (str/upper g5) "INALIENABLE") "G5 must be a named gate")
     (is (str/includes? g5 "2605192245") "G5 must cite the Land-Sovereignty ADR")
     (is (and (str/includes? n1 "Land Trust")
-             (str/includes? (str/lower-case n1) "no market price"))
+             (str/includes? (str/lower n1) "no market price"))
         "N1 must exclude Land-Trust valuation")))
 
 (deftest g6-no-pii-fields-anywhere-in-valuation
-  (let [names (map str/lower-case (all-prop-names (lex "valuation.edn")))
+  (let [names (map str/lower (all-prop-names (lex "valuation.edn")))
         leaked (sort (filter (fn [n] (some #(str/includes? n %) pii-tokens)) names))]
     (is (empty? leaked) (str "G6: PII-like fields must not exist on valuation: " leaked))))
 
