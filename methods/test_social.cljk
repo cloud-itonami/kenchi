@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 (ns test-social
   (:require [clojure.test :refer [deftest is run-tests testing]]
             [kenchi.cells.social-post.state-machine :as cell]

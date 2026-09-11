@@ -69,7 +69,7 @@ kenchi's scope entirely (G5 / toritate N12). The two actors never double-count.
 
 ## Tests
 
-`bb run_tests.cljk` → `methods/test_charter_gates.cljk` pins the gates at the schema
+`kbb run_tests.cljk` → `methods/test_charter_gates.cljk` pins the gates at the schema
 layer (PROVENANCE-OR-SILENCE, derived/aggregate license, NO-PII, inalienable-land
 exclusion, no single-source oracle). Pure stdlib, standalone-runnable.
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 (ns test-repository-contract
   (:require [clojure.edn :as edn]
             [clojure.test :refer [deftest is run-tests]]
