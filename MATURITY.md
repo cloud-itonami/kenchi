@@ -12,7 +12,7 @@ toritate's non-market commons-asset STOCK.
 | Cells | 🟡 6 path-reserved over the `com-junkawasaki/kenchi-clj` engine (R0) |
 | Manifest | ✅ present (10 gates / 10 non-goals / R0–R3 roadmap) |
 | Engine | ✅ real & tested upstream — `com-junkawasaki/kenchi-clj` (18 tests / 60 assertions green; live HM Land Registry + BIS + Common Crawl) |
-| Tests | ✅ charter gates + dry-run social membrane; `bb run_tests.cljk` |
+| Tests | ✅ charter gates + dry-run social membrane; `kbb run_tests.cljk` |
 | Source registry | ✅ `valuation/v1-sources.edn` (open authorities; flywheel recalibrates priors) |
 
 ## Charter gates pinned by the test

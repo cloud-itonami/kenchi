@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; kenchi 検地 — structural charter-gate conformance tests over the central lexicons.
 ;;
 ;; ADR-2606272030. kenchi is an EXTERNAL-MARKET real-estate valuation + transparency
@@ -12,7 +12,7 @@
 ;;   N8 NO SINGLE-SOURCE ORACLE — provenanceAttestation MUST carry nAuthorities + nComps + verdict.
 ;;
 ;; Babashka, pure (clj/bb over the kotoba substrate convention — replaces the legacy .py).
-;; Run standalone: `bb methods/test_charter_gates.cljk`  (or via `bb run_tests.cljk`).
+;; Run standalone: `kbb methods/test_charter_gates.cljk`  (or via `kbb run_tests.cljk`).
 (ns test-charter-gates
   (:require [clojure.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]

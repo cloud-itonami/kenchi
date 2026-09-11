@@ -46,7 +46,7 @@ never collide on the inalienable Trust. External price ≠ internal access value
 
 - The lexicons live in `lex/`. The
   charter-gate test (`methods/test_charter_gates.cljk`) pins the gates against
-  them — keep them in sync. Run `bb run_tests.cljk` before committing.
+  them — keep them in sync. Run `kbb run_tests.cljk` before committing.
 - `manifest.edn` is the canonical actor manifest; JSON is emitted only under `wire/`
   only; new code and conformance tests must read EDN.
 - Source and tests must resolve from this standalone repository. Do not add `20-actors` or
