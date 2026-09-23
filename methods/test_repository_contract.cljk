@@ -1,7 +1,7 @@
 #!/usr/bin/env kbb
 (ns test-repository-contract
   (:require [clojure.edn :as edn]
-            [clojure.test :refer [deftest is run-tests]]
+            [kotoba.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]))
 
 (def root (.. (io/file *file*) getCanonicalFile getParentFile getParentFile))

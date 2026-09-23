@@ -14,7 +14,7 @@
 ;; Babashka, pure (clj/bb over the kotoba substrate convention — replaces the legacy .py).
 ;; Run standalone: `kbb methods/test_charter_gates.cljk`  (or via `kbb run_tests.cljk`).
 (ns test-charter-gates
-  (:require [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]
             [clojure.edn :as edn]
             [clojure.walk :as walk]
