@@ -1,5 +1,5 @@
 #!/usr/bin/env kbb
-(require '[clojure.test :as t]
+(require '[kotoba.test :as t]
          'kenchi.murakumo-test)
 
 (let [result (t/run-tests 'kenchi.murakumo-test)]
