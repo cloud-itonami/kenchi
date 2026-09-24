@@ -1,0 +1,26 @@
+{
+  "jobs": [
+    {
+      "base_url": null,
+      "context_from": null,
+      "deliver": "local",
+      "enabled": true,
+      "enabled_toolsets": null,
+      "id": "5ccc04417d93",
+      "model": null,
+      "name": "yata-georeg-tick",
+      "no_agent": false,
+      "prompt": "yata-georeg-ontology 1 反復。\n\nまず monitor 計定 (scripts/yata_georeg_evidence.sh) を terminal で 1 回実行し PROBE 行を実測として読む。\n1 finding を選び、~/.hermes/profiles/yata-georeg-ontology/workspace/yata-georeg-ontology.edn を実測 source + asof 付きで更新する (測れていない軸は UNMEASURED)。捏造禁止。\nwiki 公開候補は ~/.hermes/profiles/yata-georeg-ontology/workspace/proposals/ に propose (publish 自体は blocked)。\n報告書式は SOUL.md。",
+      "provider": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "23 6-23/8 * * *",
+        "display": "23 6-23/8 * * *"
+      },
+      "script": "yata_georeg_evidence.sh",
+      "skill": null,
+      "skills": [],
+      "workdir": null
+    }
+  ]
+}
