@@ -4,9 +4,9 @@
 ;; Each suite is a standalone bb script that exits non-zero on failure.
 (ns run-tests
   (:require [babashka.process :refer [shell]]
-            [clojure.java.io :as io]))
+            [kotoba.io :as io]))
 
-(def here (-> *file* io/file .getCanonicalFile .getParentFile))
+(def here (-> *file* io/file io/canonical-file io/parent-file))
 (def suites ["methods/test_charter_gates.cljk"
              "methods/test_social.cljk"
              "methods/test_murakumo.cljk"
