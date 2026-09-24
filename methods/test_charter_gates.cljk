@@ -17,7 +17,7 @@
   (:require [kotoba.test :refer [deftest is run-tests]]
             [clojure.java.io :as io]
             [kotoba.lang.edn :as edn]
-            [clojure.walk :as walk]
+            [kotoba.lang.coll :as walk]
             [kotoba.lang.text :as str]
             ))
 
