@@ -15,7 +15,7 @@
 ;; Run standalone: `kbb methods/test_charter_gates.cljk`  (or via `kbb run_tests.cljk`).
 (ns test-charter-gates
   (:require [kotoba.test :refer [deftest is run-tests]]
-            [clojure.java.io :as io]
+            [kotoba.io :as io]
             [kotoba.lang.edn :as edn]
             [kotoba.lang.coll :as walk]
             [kotoba.lang.text :as str]
@@ -25,8 +25,8 @@
 (def pii-tokens ["owner" "person" "occupant" "resident" "pii" "ssn" "name"])  ; G6
 (def asset-classes #{"external-market"})                   ; G5
 
-(def ^:private script-dir (-> *file* io/file .getCanonicalFile .getParentFile))
-(def ^:private actor-dir (.getParentFile script-dir))
+(def ^:private script-dir (-> *file* io/file io/canonical-file io/parent-file))
+(def ^:private actor-dir (io/parent-file script-dir))
 
 (defn- load-edn [f] (edn/read-string (slurp f)))
 (def ^:private lex-dir (io/file actor-dir "lex"))
