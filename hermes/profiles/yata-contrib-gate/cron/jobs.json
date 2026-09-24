@@ -1,0 +1,26 @@
+{
+  "jobs": [
+    {
+      "base_url": null,
+      "context_from": null,
+      "deliver": "local",
+      "enabled": true,
+      "enabled_toolsets": null,
+      "id": "6219740b43bd",
+      "model": null,
+      "name": "yata-contrib-gate-tick",
+      "no_agent": false,
+      "prompt": "yata-contrib-gate 1 反復。\n\nまず monitor 計定 (scripts/yata_contrib_gate.sh) を terminal で 1 回実行し STAGE 行を実測として読む。\nSTAGE 実測行を ~/.hermes/profiles/yata-contrib-gate/workspace/gate-ledger.jsonl に append-only で 1 行追記 (手編集禁止)。\n2 tick 連続 ABSENT の stage があれば issue 候補を propose (issue は approval-required)。\n実装はしない (測定 bot)。報告書式は SOUL.md。捏造禁止。",
+      "provider": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "3 7-23/8 * * *",
+        "display": "3 7-23/8 * * *"
+      },
+      "script": "yata_contrib_gate.sh",
+      "skill": null,
+      "skills": [],
+      "workdir": null
+    }
+  ]
+}
