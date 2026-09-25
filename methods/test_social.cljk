@@ -1,6 +1,6 @@
 #!/usr/bin/env kbb
 (ns test-social
-  (:require [kotoba.test :refer [deftest is run-tests testing]]
+  (:require [kotoba.lang.error :as kerror] [kotoba.test :refer [deftest is run-tests testing]]
             [kenchi.cells.social-post.state-machine :as cell]
             [kenchi.methods.social :as social]))
 
@@ -20,7 +20,7 @@
 
 (deftest publication-gates
   (testing "source provenance"
-    (is (thrown? clojure.lang.ExceptionInfo
+    (is (thrown? kerror/ExceptionInfo
                  (social/draft-observation-post "subject" "body" ["one"]))))
   (testing "server keys and live requests refuse"
     (is (= cell/phase-refused
@@ -31,7 +31,7 @@
            (get-in (cell/transition-to-drafted
                     {"subject" "x" "sources" ["a" "b"] "requested_status" "published"})
                    ["cell_state" "phase"])))
-    (is (thrown? clojure.lang.ExceptionInfo (social/build-live {})))))
+    (is (thrown? kerror/ExceptionInfo (social/build-live {})))))
 
 (let [{:keys [fail error]} (run-tests 'test-social)]
   (System/exit (if (pos? (+ fail error)) 1 0)))
