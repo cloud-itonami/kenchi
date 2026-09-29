@@ -29,7 +29,7 @@
  [{"phase" "R0",
    "date" "2026-06-27",
    "scope"
-   "Scaffold. 6 cells path-reserved over the com-junkawasaki/kenchi-clj engine. 4 Lexicon skeletons. manifest + README + CLAUDE.md + DID + charter-gate test.",
+   "Scaffold. 6 cells path-reserved over the com-junkawasaki/kenchi-clj engine. 4 Lexicon skeletons. manifest + README + AGENTS.md + DID + charter-gate test.",
    "murakumoFleet" "No deployment",
    "gate" "ADR-2606272030 (PROPOSED)"}
   {"phase" "R1",
