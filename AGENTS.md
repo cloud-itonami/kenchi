@@ -1,4 +1,4 @@
-# com-etzhayyim-kenchi — CLAUDE.md
+# com-etzhayyim-kenchi — AGENTS.md
 
 ## Identity
 
